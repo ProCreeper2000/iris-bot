@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     if (toMute.id === message.author.id) return message.reply("What are you trying to do, muting yourself?!");
     if (toMute.highestRole.position >= message.member.highestRole.position) return message.reply("What are you trying to do, muting someone higher than you?! That's like suspending your boss!");
 
-    if (args[1] > 604800 || args[1] < 10) return message.reply("You must specify the number of seconds to mute someone between 10 and 604800.");
+    if (args[1] > 604800 || args[1] < 10) return message.reply("You must specify the number of seconds to mute someone between 10 and 2419200 (28 days).");
 
 
     let role = message.guild.roles.find(r => r.name === "Muted by Iris");
