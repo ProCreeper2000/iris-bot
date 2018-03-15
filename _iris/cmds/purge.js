@@ -15,5 +15,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "purge",
-    usage: "purge <2-100>"
+    usage: "purge <2-100>",
+    description: "Purges (deletes) up to 100 messages.",
+    category: "moderation"
 }

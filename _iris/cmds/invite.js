@@ -12,5 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "invite",
-    usage: "invite"
+    usage: "invite",
+    description: "Invite link.",
+    category: "general"
 }

@@ -10,5 +10,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "time",
-    usage: "time"
+    usage: "time",
+    description: "Current time.",
+    category: "utility"
 }

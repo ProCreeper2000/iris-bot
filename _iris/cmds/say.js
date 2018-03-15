@@ -8,5 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "say",
-    usage: "say <message>"
+    usage: "say <message>",
+    description: "Deletes original command and makes the bot say something.",
+    category: "fun"
 }

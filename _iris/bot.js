@@ -3,8 +3,12 @@ const config = require("./config.json"); //Config.json contains the token and pr
 const bot = new discord.Client();
 const fs = require('fs');
 
-
 bot.commands = new discord.Collection();
+
+bot.usage = new discord.Collection();
+bot.help = new discord.Collection();
+bot.category = new discord.Collection();
+
 bot.mutes = require("./mutes.json");
 
 const message = "msg";
@@ -22,13 +26,14 @@ exports.load = () => {
             let props = require(`./cmds/${f}`);
             console.log(`${i + 1}. ${f} loaded!`);
             bot.commands.set(props.help.name, props);
+            bot.usage.set(props.help.name, props.help.usage);
+            bot.help.set(props.help.name, props.help.description);
+            bot.category.set(props.help.name, props.help.category);
         });
     });
 }
 
 this.load();
-
-
 
 bot.on("ready", async () => {
     console.log(`Token: ${config.token}`);

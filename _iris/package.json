@@ -1,6 +1,6 @@
 {
   "name": "iris",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Iris, a Discord bot by ProCreeper2000",
   "main": "bot.js",
   "dependencies": {

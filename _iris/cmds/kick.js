@@ -20,5 +20,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "kick",
-    usage: "kick <user> <reason>"
+    usage: "kick <user> <reason>",
+    description: "Kicks a user.",
+    category: "moderation"
 }

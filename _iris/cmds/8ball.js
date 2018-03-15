@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
         "Very doubtful"
     ];
 
-    if (args.length < 2 || !args.join(" ").endsWith("?")) return message.reply("You must ask something of the Magic 8ball!");
+    if (args.length < 2 || !args.join(" ").endsWith("?")) return message.reply("You must ask something of the Magic 8-ball!");
 
     let embed = new discord.RichEmbed()
         .setColor("#1e89c7")
@@ -35,5 +35,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "8ball",
-    usage: "8ball <question>"
+    usage: "8ball <question>",
+    description: "Ask a question to the Magic 8-ball!",
+    category: "fun"
 }

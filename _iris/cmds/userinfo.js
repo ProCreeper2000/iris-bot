@@ -31,5 +31,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "userinfo",
-    usage: "userinfo <mention (optional)>"
+    usage: "userinfo <mention (optional)>",
+    description: "Userinfo for you or another user.",
+    category: "utility"
 }

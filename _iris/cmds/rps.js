@@ -37,5 +37,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "rps",
-    usage: "rps <rock/paper/scissor/scissors>"
+    usage: "rps <rock/paper/scissor/scissors>",
+    description: "Play rock paper scissors!",
+    category: "fun"
 }

@@ -23,5 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "eval",
-    usage: "eval <js>"
+    usage: "eval <js>",
+    description: "Evals js.",
+    category: "dev"
 }
