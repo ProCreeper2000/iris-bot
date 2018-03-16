@@ -3,6 +3,20 @@ const config = require("./config.json"); //Config.json contains the token and pr
 const bot = new discord.Client();
 const fs = require('fs');
 
+
+const Enmap = require('enmap');
+const EnmapLevel = require('enmap-level');
+const guildConfig = new Enmap({provider: new EnmapLevel({name: "settings"})});
+bot.guildConf = guildConfig;
+
+const defaultConf = {
+    prefix: "`",
+    modRole: "Moderator",
+    adminRole: "Administrator",
+    welcomeMessage: "Welcome {{user}}!"
+}
+
+
 bot.commands = new discord.Collection();
 
 bot.usage = new discord.Collection();
@@ -68,20 +82,41 @@ bot.on("ready", async () => {
                 });
             }
         }
-    }, 5000);﻿
+    }, 5000);
+});
+ 
+
+bot.on("guildCreate", guild => {
+    // Adding a new row to the collection use: `set(key, value)`
+    guildConfig.set(guild.id, defaultConf);
+});
+  
+bot.on("guildDelete", guild => {
+    // Remove an element: use `delete(key)`
+    guildConfig.delete(guild.id);
 });
  
  
- 
 bot.on("message", async function (message) {
+    guildConfig.set(message.guild.id, {
+        prefix: "`",
+        modRole: "Moderator",
+        adminRole: "Administrator",
+        welcomeMessage: "Welcome {{user}}!"
+    });
+
     if (message.author.bot || !message.content.startsWith(config.prefix)) return;
     if (message.channel.type === "dm") return message.reply("Commands are not available via DM!");
+
+    const conf = guildConfig.get(message.guild.id);
+
+    if (message.author.bot || !message.content.startsWith(conf.prefix)) return;
  
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
     let cmd = bot.commands.get(command);
-    if (cmd) cmd.run(bot, message, args);
+    if (cmd) cmd.run(bot, message, args, conf);
 })
 
 bot.login(config.token);
