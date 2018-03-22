@@ -1,15 +1,14 @@
 body {
-    /* background-image: url("../bg-dark.jpg");
+    background-image: url("../bg-enhanced.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover; */
-    background-color: rgb(44,47,51);
+    background-size: cover;
+    background-color: rgba(0,0,0,0.3);
+    background-blend-mode: multiply;
     margin: 0;
     padding: 0;
     color: white;
 }
-
-
 
 
 
@@ -102,7 +101,7 @@ p3 {
     -moz-box-shadow: 0px 3px 6px 0px #3d3d3d;
     -webkit-box-shadow: 0px 3px 6px 0px #3d3d3d;
     box-shadow: 0px 3px 6px 0px #3d3d3d;
-    background-color: rgb(44,47,51);
+    background-color: transparent;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
@@ -137,7 +136,10 @@ p3 {
     width: 90%;
     text-align: center;
     margin: auto;
-    background-color: rgb(114,137,218)
+    padding: 15px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    background-color: rgba(44,47,51,0.6);
 }
 
 .contentBar {
