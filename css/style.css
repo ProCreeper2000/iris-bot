@@ -15,40 +15,37 @@ body {
 h1 {
     font-family: Open Sans, sans-serif;
     font-style: normal;
-    font-size: 64px;
-    color: white;
-    text-shadow: 0px 3px 6px #3d3d3d;
+    font-size: 10vh;
+    text-shadow: 0px 0.5vh 1vh rgba(0, 0, 0, 0.4);
 }
 
 h2 {
     font-family: Open Sans, sans-serif;
     font-style: normal;
-    font-size: 40px;
-    color: white;
-    text-shadow: 0px 3px 4.5px #3d3d3d;
+    font-size: 7vh;
+    text-shadow: 0px 0.5vh 0.75vh rgba(0, 0, 0, 0.4);
 }
 
 h3 {
     font-family: Open Sans, sans-serif;
     font-style: normal;
-    font-size: 32px;
-    color: white;
-    text-shadow: 0px 3px 3px #3d3d3d;
+    font-size: 5.4vh;
+    text-shadow: 0px 0.5vh 0.5vh rgba(0, 0, 0, 0.4);
 }
 
 p {
     font-family: Open Sans, sans-serif;
-    font-size: 23px;
+    font-size: 4vh;
 }
 
 p2 {
     font-family: Open Sans, sans-serif;
-    font-size: 21px;
+    font-size: 3.5vh;
 }
 
 p3 {
     font-family: Open Sans, sans-serif;
-    font-size: 19px;
+    font-size: 3vh;
 }
 
 
@@ -63,10 +60,10 @@ p3 {
     transition: 0.5s;
 }
 
-    .logo:hover {
-        transform: scale(1.02, 1.02);
-        transition: 0.5s;
-    }
+.logo:hover {
+    transform: scale(1.02, 1.02);
+    transition: 0.5s;
+}
 
 
 
@@ -74,24 +71,24 @@ p3 {
 
 .box {
     background-color: white;
-    border-radius: 3px;
+    border-radius: 0.5vh;
     -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     margin: 5px;
     color: black;
     text-align: center;
     display: inline-block;
-    padding: 15px;
-    min-width: 250px;
+    padding: 1.5vw;
+    min-width: 40vh;
     transition: 0.5s;
 }
 
-    .box:hover {
-        background-color: #eee;
-        -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-        transition: 0.5s;
-    }
+.box:hover {
+    background-color: #eee;
+    -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
 
 
 
@@ -105,41 +102,120 @@ p3 {
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+    color: #fff;
     font-family: Arial;
-    font-size: 28px;
-    padding: 6px 15px;
+    font-size: 4.5vh;
+    padding: 1vh 3.5vh;
     text-decoration: none;
     text-shadow: 0px 2px 3px #3d3d3d;
     transition: 0.5s;
 }
 
-    .button1:hover {
-        background: rgb(114,137,218);
-        transform: scale(0.96, 0.96);
-        transition: 0.5s;
-    }
+.button1:hover {
+    background: rgb(114,137,218);
+    transform: scale(0.96, 0.96);
+    transition: 0.5s;
+}
 
-    .button1:active {
-        position: relative;
-        top: 2px;
-    }
+.button1:active {
+    position: relative;
+    top: 2px;
+}
+
+
+.button2 {
+    -moz-box-shadow: 0px 3px 6px 0px #3d3d3d;
+    -webkit-box-shadow: 0px 3px 6px 0px #3d3d3d;
+    box-shadow: 0px 3px 6px 0px #3d3d3d;
+    background-color: transparent;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 0.4vh solid #111;
+    display: inline-block;
+    cursor: pointer;
+    color: #111;
+    font-family: Arial;
+    font-size: 4.5vh;
+    padding: 1vh 3.5vh;
+    text-decoration: none;
+    text-shadow: 0px 2px 3px #3d3d3d;
+    transition: 0.5s;
+}
+
+.button2:hover {
+    background: rgb(114,137,218);
+    transform: scale(0.96, 0.96);
+    transition: 0.5s;
+}
+
+.button2:active {
+    position: relative;
+    top: 2px;
+}
+
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-shadow: 0 0.3vh 0.3vh rgba(0,0,0,0.2);
+    background-color: transparent;
+}
+
+ul.vert-li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    text-shadow: 0 0.3vh 0.3vh rgba(0,0,0,0.2);
+    background-color: transparent;
+}
+
+li:not(.vert-li) {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1.7vh 1vh;
+    font-family: Open Sans, sans-serif;
+    font-size: 3.3vh;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+li a:hover:not(.active) {
+    background-color: rgba(255,255,255,0.35);
+    transition: 0.5s;
+}
+
+li a.active {
+    background-color: rgb(255,255,255);
+    transition: 0.5s;
+}
 
 
 
 
 
 .medium {
-    width: 90%;
+    width: auto;
     text-align: center;
     margin: auto;
-    padding: 15px;
-    padding-bottom: 80px;
-    padding-top: 80px;
-    background-color: rgba(44,47,51,0.6);
+    padding: 2.5vh;
+    padding-bottom: 12vh;
+    padding-top: 12vh;
+    background-color: rgb(230, 230, 230);
 }
 
 .contentBar {
@@ -152,9 +228,9 @@ p3 {
 .footer {
     height: auto;
     width: auto;
-    background: white;
+    background: rgb(240, 240, 240);
     color: black;
-    padding: 5px;
+    padding: 3vh;
 }
 
 
@@ -177,34 +253,34 @@ p3 {
 
 @keyframes hover {
     0% {
-        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-        transform: translatey(0px);
+        box-shadow: 0 1vh 2.5vh 0px rgba(0,0,0,0.6);
+        transform: translatey(0vh);
     }
-
+    
     50% {
-        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
-        transform: translatey(-20px);
+        box-shadow: 0 1vh 2.5vh 0px rgba(0,0,0,0.2);
+        transform: translatey(-3.3vh);
     }
-
+    
     100% {
-        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-        transform: translatey(0px);
+        box-shadow: 0 1vh 2.5vh 0px rgba(0,0,0,0.6);
+        transform: translatey(0vh);
     }
 }
 
 @keyframes text-hover {
     0% {
-        text-shadow: 0px 5px 5px #3d3d3d;
+        text-shadow: 0px 1vh 1vh #3d3d3d;
         transform: translatey(0px);
     }
-
+    
     50% {
-        text-shadow: 0px 25px 15px #3d3d3d;
-        transform: translatey(-20px);
+        text-shadow: 0px 4vh 2.5vh #3d3d3d;
+        transform: translatey(-3.3vh);
     }
-
+    
     100% {
-        text-shadow: 0px 5px 5px #3d3d3d;
+        text-shadow: 0px 1vh 1vh #3d3d3d;
         transform: translatey(0px);
     }
 }
