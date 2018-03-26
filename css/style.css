@@ -134,10 +134,10 @@ p3 {
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
-    border: 0.4vh solid #111;
+    border: 0.4vh solid #000;
     display: inline-block;
     cursor: pointer;
-    color: #111;
+    color: #000;
     font-family: Arial;
     font-size: 4.5vh;
     padding: 1vh 3.5vh;
@@ -215,7 +215,7 @@ li a.active {
     padding: 2.5vh;
     padding-bottom: 12vh;
     padding-top: 12vh;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(240, 240, 240);
 }
 
 .contentBar {
