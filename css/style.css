@@ -215,7 +215,7 @@ li a.active {
     padding: 2.5vh;
     padding-bottom: 12vh;
     padding-top: 12vh;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(248, 248, 248);
 }
 
 .contentBar {
@@ -228,7 +228,7 @@ li a.active {
 .footer {
     height: auto;
     width: auto;
-    background: rgb(240, 240, 240);
+    background: white;
     color: black;
     padding: 3vh;
 }
